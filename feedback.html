@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+        }
+        
+        .form-container {
+            background-color: burlywood;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: black;
+        }
+
+        
+        input[type="text"], 
+        input[type="email"], 
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+            color:black;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #021931;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Customer Feedback</h2>
+        <p>We value your feedback. Please fill out the details below.</p>
+        
+        <form action="#" method="post">
+            
+          
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="visit-date">Date of Visit:</label>
+                <input type="date" id="visit-date" name="visit-date" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="service">Type of Service Received:</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="support">Customer Support</option>
+                    <option value="sales">Sales</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group radio-group">
+                <label>Overall Experience:</label><br>
+                <input type="radio" id="excellent" name="rating" value="excellent" required>
+                <label for="excellent">Excellent</label>
+                
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label>
+                
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Poor</label>
+            </div>
+
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="recommend" name="recommend" value="yes">
+                <label for="recommend">I would recommend this service to a friend.</label>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="comments">Suggestions for Improvement:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Let us know how we can do better..."></textarea>
+            </div>
+
+            
+            <button type="submit">Submit Feedback</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
